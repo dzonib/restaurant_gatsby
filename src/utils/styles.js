@@ -5,7 +5,7 @@ export const colors = {
     mainYellow2: `#F2AF29`,
     mainGrey: `#474747`,
   }
-  export const textSlanted = `font-family:'Caveat', cursive;`
+  export const textSlanted = `font-family: 'Caveat', cursive;`
   
   export const transDefault = 'transition:all 0.5s ease-in-out'
   export const transFunction = (
@@ -25,7 +25,7 @@ export const colors = {
   
   export const transition = ({
     property = 'all',
-    time = '0.5s',
+    time = '0.3s',
     type = 'ease-in-out',
   }) => {
     return `transition: ${property} ${time} ${type}`
