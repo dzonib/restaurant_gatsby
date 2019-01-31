@@ -8,7 +8,7 @@ export default class Footer extends Component {
 		icons: [
 			{ id: 1, icon: <FaFacebook className="icon facebook-icon" />, path: 'https://facebook.com' },
 			{ id: 2, icon: <FaTwitter className="icon twitter-icon" />, path: 'https://twitter.com' },
-			{ id: 1, icon: <FaInstagram className="icon instagram-icon" />, path: 'https://instagram.com' }
+			{ id: 3, icon: <FaInstagram className="icon instagram-icon" />, path: 'https://instagram.com' }
 		]
 	}
 
