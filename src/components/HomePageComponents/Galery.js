@@ -37,35 +37,43 @@ export default function Gallery() {
     <StaticQuery
       query={GET_SINGLE_IMAGE}
       render={data => {
-        const img1 = data.img1.childImageSharp.fluid
-        const img2 = data.img2.childImageSharp.fluid
-        const img3 = data.img3.childImageSharp.fluid
-
-        return (
-          <Section>
+      const img1 = data.img1.childImageSharp.fluid 
+      const img2 = data.img2.childImageSharp.fluid
+      const img3 = data.img3.childImageSharp.fluid 
+      return (
+        <Section>
           <StyledGallery>
             <div className="item item-1">
               <Img fluid={img1}/>
-              <div className="info"> awesome pizza</div>
+              <div className="info">
+                awesome pizza
+              </div>
             </div>
             <div className="item item-2">
               <Img fluid={img2}/>
-              <div className="info"> awesome pizza</div>
+              <div className="info">
+                awesome pizza
+              </div>
             </div>
             <div className="item item-3">
               <Img fluid={img3}/>
-              <div className="info"> awesome pizza </div>
+              <div className="info">
+                awesome pizza
+              </div>
             </div>
           </StyledGallery>
-          </Section>
-        )
-      }}/>
+        </Section>
+      )
+    }}/>
   )
 }
 
-const StyledGallery = styled.div`
+const StyledGallery = styled.div `
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  height: 100%;
+  column-gap: 1rem;
+  row-gap: 1rem;
   
   .item {
     position: relative;
@@ -81,7 +89,11 @@ const StyledGallery = styled.div`
   }
 
   @media(min-width: 992px) {
-    grid-template-columns: 1fr 1fr 1fr;
+
+    .gatsby-image-wrapper {
+      height: 100%;
+    }
+    grid-template-columns: 1fr 1fr 1fr; 
     grid-template-areas: 
       'big big small'
       'big big small2';
